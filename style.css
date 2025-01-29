@@ -1,0 +1,216 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff9fb;
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.gold-border {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 3px solid #d4af37;
+    z-index: -1;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.couple-img {
+    width: 250px;
+    height: 250px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #d4af37;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.couple-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.wedding-date {
+    font-size: 1.8rem;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* Event Cards */
+.event-card {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 15px;
+    background: #f8f8f8;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.haldi {
+    background: #fff9e6;
+    border-left: 5px solid #ffd700;
+}
+
+.mehendi {
+    background: #f0fff0;
+    border-left: 5px solid #32cd32;
+}
+
+.date, .time, .location {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.date i, .time i, .location i {
+    margin-right: 10px;
+    color: #d4af37;
+}
+
+/* Map Styles */
+.map-container {
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* Gallery Styles */
+.gallery {
+    margin: 3rem 0;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #b08f26;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .couple-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
